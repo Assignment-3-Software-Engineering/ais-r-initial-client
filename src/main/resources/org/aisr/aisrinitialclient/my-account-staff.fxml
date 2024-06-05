@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="953.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.aisr.aisrinitialclient.controller.MyAccountStaffController">
+    <Button fx:id="btnNavigateDashboard" layoutX="15.0" layoutY="5.0" mnemonicParsing="false" onAction="#navigateDashboard" style="-fx-background-color: rgba(255,255,255,0); -fx-padding: 0 10 0 0; -fx-border-color: rgba(255,255,255,0) rgba(0,0,0,0.5) rgba(255,255,255,0) white;" text="Dash Board">
+        <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+        </font>
+        <cursor>
+            <Cursor fx:constant="HAND" />
+        </cursor>
+    </Button>
+    <Button fx:id="btnNavigateMyAccount" disable="true" layoutX="101.0" layoutY="5.0" mnemonicParsing="false" style="-fx-background-color: rgba(255,255,255,0); -fx-padding: 0 10 0 10; -fx-border-color: rgba(255,255,255,0) rgba(0,0,0,0.5) rgba(255,255,255,0) white;" text="My Account">
+        <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+        </font>
+        <cursor>
+            <Cursor fx:constant="HAND" />
+        </cursor>
+    </Button>
+    <Button fx:id="btnNavigateStaffManagement" layoutX="197.0" layoutY="5.0" mnemonicParsing="false" onAction="#navigateStaffManagement" style="-fx-background-color: rgba(255,255,255,0); -fx-padding: 0 10 0 10; -fx-border-color: rgba(255,255,255,0) rgba(0,0,0,0.5) rgba(255,255,255,0) white;" text="Staff Management">
+        <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+        </font>
+        <cursor>
+            <Cursor fx:constant="HAND" />
+        </cursor>
+    </Button>
+    <Button fx:id="btnNavigateRecruitManagement" layoutX="334.0" layoutY="5.0" mnemonicParsing="false" onAction="#navigateRecruitManagement" style="-fx-background-color: rgba(255,255,255,0); -fx-padding: 0 10 0 10; -fx-border-color: rgba(255,255,255,0);" text="Recruit Management">
+        <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+        </font>
+        <cursor>
+            <Cursor fx:constant="HAND" />
+        </cursor>
+    </Button>
+
+    <Label fx:id="lblUserFullName" layoutX="527.0" layoutY="6.0" prefHeight="16.0" prefWidth="346.0" style="-fx-alignment: center-right;" textAlignment="RIGHT" wrapText="true">
+        <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+        </font>
+    </Label>
+    <Label fx:id="lblUserUsername" layoutX="527.0" layoutY="25.0" prefHeight="16.0" prefWidth="346.0" style="-fx-alignment: center-right;" textAlignment="RIGHT" textFill="#00000080" wrapText="true">
+        <font>
+            <Font name="Arial Rounded MT Bold" size="10.0" />
+        </font>
+    </Label>
+    <Button fx:id="btnLogout" layoutX="880.0" layoutY="10.0" mnemonicParsing="false" onAction="#logout" text="Log Out">
+        <cursor>
+            <Cursor fx:constant="HAND" />
+        </cursor>
+        <tooltip>
+            <Tooltip text="Log Out" />
+        </tooltip>
+    </Button>
+
+    <Label layoutX="14.0" layoutY="33.0" text="AIS-R-Initial / " textFill="#00000099">
+        <font>
+            <Font name="Arial Rounded MT Bold" size="18.0" />
+        </font>
+    </Label>
+
+    <Label layoutX="131.0" layoutY="33.0" text="My Account">
+        <font>
+            <Font name="Arial Rounded MT Bold" size="18.0" />
+        </font>
+    </Label>
+   <Group layoutX="14.0" layoutY="236.0">
+      <children>
+      
+          <PasswordField fx:id="txtPassword" layoutY="21.0" prefHeight="30.0" prefWidth="365.0" promptText="New Password">
+              <font>
+                  <Font name="Arial" size="15.0" />
+              </font>
+          </PasswordField>
+         <Label text="New Password">
+            <font>
+               <Font size="15.0" />
+            </font>
+         </Label>
+      </children>
+   </Group>
+   <Group layoutX="14.0" layoutY="295.0">
+      <children>
+         <PasswordField fx:id="txtPassword1" layoutY="21.0" prefHeight="30.0" prefWidth="364.0" promptText="Re Enter New Password">
+            <font>
+               <Font name="Arial" size="15.0" />
+            </font>
+         </PasswordField>
+         <Label text="Re Enter New Password">
+            <font>
+               <Font size="15.0" />
+            </font>
+         </Label>
+      </children>
+   </Group>
+   <Separator layoutX="487.0" layoutY="67.0" orientation="VERTICAL" prefHeight="498.0" prefWidth="7.0" />
+    <Button fx:id="btnSave" layoutX="234.0" layoutY="358.0" mnemonicParsing="false" onAction="#onClickSave" prefHeight="36.0" prefWidth="142.0" text="Update Password" textAlignment="CENTER">
+        <font>
+            <Font name="Arial" size="15.0" />
+        </font>
+    </Button>
+   <Group layoutX="15.0" layoutY="103.0">
+      <children>
+          <Label fx:id="lblCreateDate" layoutY="102.0" prefHeight="17.0" prefWidth="372.0" text="Created Date: ">
+              <font>
+                  <Font name="Arial Rounded MT Bold" size="15.0" />
+              </font>
+         </Label>
+         <Label fx:id="lblUpdateDate" layoutY="75.0" prefHeight="17.0" prefWidth="371.0" text="Last Updated Date: ">
+            <font>
+               <Font name="Arial Rounded MT Bold" size="15.0" />
+            </font>
+         </Label>
+         <Label fx:id="lblAccUsername" prefHeight="17.0" prefWidth="369.0" text="Account Username">
+            <font>
+               <Font name="Arial Rounded MT Bold" size="15.0" />
+            </font>
+         </Label>
+         <Label fx:id="lblAccountStatus" layoutY="28.0" prefHeight="17.0" prefWidth="372.0" text="Account Status">
+            <font>
+               <Font name="Arial Rounded MT Bold" size="15.0" />
+            </font>
+         </Label>
+         <Label fx:id="lblAccRole" layoutY="52.0" prefHeight="17.0" prefWidth="371.0" text="Account Role">
+            <font>
+               <Font name="Arial Rounded MT Bold" size="15.0" />
+            </font>
+         </Label>
+      </children>
+   </Group>
+   <Label layoutX="14.0" layoutY="67.0" text="Change Password" textFill="#000000bd" underline="true">
+      <font>
+         <Font name="System Bold Italic" size="15.0" />
+      </font>
+   </Label>
+   <Label layoutX="504.0" layoutY="67.0" text="Update My Information" textFill="#000000bd" underline="true">
+      <font>
+         <Font name="System Bold Italic" size="15.0" />
+      </font>
+   </Label>
+   <Group layoutX="504.0" layoutY="103.0">
+      <children>
+         <Label fx:id="lblStaffCreateDate" layoutY="102.0" prefHeight="17.0" prefWidth="372.0" text="Created Date: ">
+            <font>
+               <Font name="Arial Rounded MT Bold" size="15.0" />
+            </font>
+         </Label>
+         <Label fx:id="lblStaffManagementLevel" layoutY="75.0" prefHeight="17.0" prefWidth="371.0" text="Management Level: ">
+            <font>
+               <Font name="Arial Rounded MT Bold" size="15.0" />
+            </font>
+         </Label>
+         <Label fx:id="lblStaffId" prefHeight="17.0" prefWidth="369.0" text="Staff ID: ">
+            <font>
+               <Font name="Arial Rounded MT Bold" size="15.0" />
+            </font>
+         </Label>
+         <Label fx:id="lblStaffBranch" layoutY="28.0" prefHeight="17.0" prefWidth="372.0" text="Branch: ">
+            <font>
+               <Font name="Arial Rounded MT Bold" size="15.0" />
+            </font>
+         </Label>
+         <Label fx:id="lblStaffPosition" layoutY="52.0" prefHeight="17.0" prefWidth="371.0" text="Position : ">
+            <font>
+               <Font name="Arial Rounded MT Bold" size="15.0" />
+            </font>
+         </Label>
+      </children>
+   </Group>
+   <Group layoutX="504.0" layoutY="236.0">
+      <children>
+         <TextField fx:id="txtFullName" layoutY="21.0" prefHeight="30.0" prefWidth="436.0" />
+         <Label text="Full Name">
+            <font>
+               <Font size="15.0" />
+            </font>
+         </Label>
+      </children>
+   </Group>
+   <Group layoutX="504.0" layoutY="297.0">
+      <children>
+         <TextArea fx:id="txtAddress" layoutY="23.0" prefHeight="51.0" prefWidth="436.0" />
+         <Label text="Address">
+            <font>
+               <Font size="15.0" />
+            </font>
+         </Label>
+      </children>
+   </Group>
+   <Group layoutX="504.0" layoutY="378.0">
+      <children>
+         <TextField fx:id="txtPhone"  layoutY="21.0" prefHeight="30.0" prefWidth="436.0" />
+         <Label text="Phone Number">
+            <font>
+               <Font size="15.0" />
+            </font>
+         </Label>
+      </children>
+   </Group>
+   <Group layoutX="504.0" layoutY="439.0">
+      <children>
+         <TextField fx:id="txtEmail" layoutY="21.0" prefHeight="30.0" prefWidth="436.0" />
+         <Label text="Email">
+            <font>
+               <Font size="15.0" />
+            </font>
+         </Label>
+      </children>
+   </Group>
+   <Button fx:id="btnUpdate" layoutX="797.0" layoutY="496.0" mnemonicParsing="false" onAction="#onClickUpdate" prefHeight="36.0" prefWidth="142.0" text="Update" textAlignment="CENTER">
+      <font>
+         <Font name="Arial" size="15.0" />
+      </font>
+   </Button>
+</Pane>

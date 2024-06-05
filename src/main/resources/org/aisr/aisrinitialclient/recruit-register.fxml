@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="553.0" prefWidth="953.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.aisr.aisrinitialclient.controller.RecruitRegisterController">
+    <Button fx:id="btnNavigateDashboard" layoutX="15.0" layoutY="5.0" mnemonicParsing="false" onAction="#navigateDashboard" style="-fx-background-color: rgba(255,255,255,0); -fx-padding: 0 10 0 0; -fx-border-color: rgba(255,255,255,0) rgba(0,0,0,0.5) rgba(255,255,255,0) white;" text="Dash Board">
+        <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+        </font>
+        <cursor>
+            <Cursor fx:constant="HAND" />
+        </cursor>
+    </Button>
+    <Button fx:id="btnNavigateMyAccount" layoutX="101.0" layoutY="5.0" mnemonicParsing="false" onAction="#navigateMyAccount" style="-fx-background-color: rgba(255,255,255,0); -fx-padding: 0 10 0 10; -fx-border-color: rgba(255,255,255,0) rgba(0,0,0,0.5) rgba(255,255,255,0) white;" text="My Account">
+        <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+        </font>
+        <cursor>
+            <Cursor fx:constant="HAND" />
+        </cursor>
+    </Button>
+    <Button fx:id="btnNavigateStaffManagement" layoutX="197.0" layoutY="5.0" mnemonicParsing="false" onAction="#navigateStaffManagement" style="-fx-background-color: rgba(255,255,255,0); -fx-padding: 0 10 0 10; -fx-border-color: rgba(255,255,255,0) rgba(0,0,0,0.5) rgba(255,255,255,0) white;" text="Staff Management">
+        <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+        </font>
+        <cursor>
+            <Cursor fx:constant="HAND" />
+        </cursor>
+    </Button>
+    <Button fx:id="btnNavigateRecruitManagement" disable="true" layoutX="334.0" layoutY="5.0" mnemonicParsing="false" style="-fx-background-color: rgba(255,255,255,0); -fx-padding: 0 10 0 10; -fx-border-color: rgba(255,255,255,0);" text="Recruit Management">
+        <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+        </font>
+        <cursor>
+            <Cursor fx:constant="HAND" />
+        </cursor>
+    </Button>
+
+    <Label fx:id="lblUserFullName" layoutX="527.0" layoutY="6.0" prefHeight="16.0" prefWidth="346.0" style="-fx-alignment: center-right;" textAlignment="RIGHT" wrapText="true">
+        <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+        </font>
+    </Label>
+    <Label fx:id="lblUserUsername" layoutX="527.0" layoutY="25.0" prefHeight="16.0" prefWidth="346.0" style="-fx-alignment: center-right;" textAlignment="RIGHT" textFill="#00000080" wrapText="true">
+        <font>
+            <Font name="Arial Rounded MT Bold" size="10.0" />
+        </font>
+    </Label>
+    <Button fx:id="btnLogout" layoutX="880.0" layoutY="10.0" mnemonicParsing="false" onAction="#logout" text="Log Out">
+        <cursor>
+            <Cursor fx:constant="HAND" />
+        </cursor>
+        <tooltip>
+            <Tooltip text="Log Out" />
+        </tooltip>
+    </Button>
+
+    <Label layoutX="14.0" layoutY="33.0" text="AIS-R-Initial / " textFill="#00000099">
+        <font>
+            <Font name="Arial Rounded MT Bold" size="18.0" />
+        </font>
+    </Label>
+
+    <Label layoutX="131.0" layoutY="33.0" text="Recruit Management">
+        <font>
+            <Font name="Arial Rounded MT Bold" size="18.0" />
+        </font>
+    </Label>
+    <ScrollPane layoutX="15.0" layoutY="73.0" prefHeight="456.0" prefWidth="321.0" style="-fx-border-color: #fff;">
+        <content>
+            <AnchorPane prefHeight="774.0" prefWidth="295.0">
+                <children>
+                    <Group layoutX="5.0" layoutY="40.0">
+                        <children>
+                            <Label text="Full name" />
+                            <Label layoutX="53.0" text="*" textFill="RED">
+                                <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                </font>
+                            </Label>
+                            <TextField fx:id="txtFullName" layoutY="17.0" prefHeight="33.0" prefWidth="289.0" promptText="eg:- John Hamish Watson" />
+                        </children>
+                    </Group>
+                    <Group layoutX="5.0" layoutY="98.0">
+                        <children>
+                            <Label text="Address" />
+                            <Label layoutX="43.0" layoutY="-1.0" text="*" textFill="RED">
+                                <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                </font>
+                            </Label>
+                            <TextArea fx:id="txtAddress" layoutY="17.0" prefHeight="52.0" prefWidth="289.0" promptText="eg:- 221B Baker Street, London" />
+                        </children>
+                    </Group>
+                    <Group layoutX="5.0" layoutY="174.0">
+                        <children>
+                            <Label text="Phone Number" />
+                            <Label layoutX="81.0" layoutY="-1.0" prefHeight="20.0" prefWidth="0.0" text="*" textFill="RED">
+                                <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                </font>
+                            </Label>
+                            <TextField fx:id="txtPhone" layoutY="17.0" prefHeight="33.0" prefWidth="289.0" promptText="eg:- 5551234567" />
+                        </children>
+                    </Group>
+                    <Group layoutX="5.0" layoutY="231.0">
+                        <children>
+                            <Label text="Email Address" />
+                            <Label layoutX="74.0" layoutY="-1.0" text="*" textFill="RED">
+                                <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                </font>
+                            </Label>
+                            <TextField fx:id="txtEmail" layoutY="17.0" prefHeight="33.0" prefWidth="289.0" promptText="eg:- jhwatson@sample.com" />
+                        </children>
+                    </Group>
+                    <Group layoutX="6.0" layoutY="318.0">
+                        <children>
+                            <Label text="Username" />
+                            <Label layoutX="53.0" text="*" textFill="RED">
+                                <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                </font>
+                            </Label>
+                            <TextField fx:id="txtUsername" layoutY="17.0" prefHeight="33.0" prefWidth="289.0" promptText="eg:- JHWATSON" />
+                        </children>
+                    </Group>
+          <!--          <Group layoutX="4.0" layoutY="375.0">
+                        <children>
+                            <TextField fx:id="txtPassword" layoutY="17.0" prefHeight="33.0" prefWidth="206.0" promptText="Enter a Secure Password" />
+                            <Label text="Password" />
+                            <Button fx:id="btnGeneratePassword" layoutX="215.0" layoutY="17.0" mnemonicParsing="false" onAction="#setBtnGeneratePassword" prefHeight="33.0" prefWidth="77.0" text="Generate">
+                                <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                </cursor>
+                                <tooltip>
+                                    <Tooltip text="Generate Secure Password and copy to clip board" />
+                                </tooltip>
+                            </Button>
+                            <Label layoutX="50.0" layoutY="-1.0" text="*" textFill="RED">
+                                <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                </font>
+                            </Label>
+                        </children>
+                    </Group>-->
+                    <Separator layoutX="5.0" layoutY="14.0" prefHeight="4.0" prefWidth="289.0" />
+                    <Label layoutX="5.0" layoutY="18.0" text="Personal Information" textFill="#00000099">
+                        <font>
+                            <Font name="Arial Bold" size="13.0" />
+                        </font>
+                    </Label>
+                    <Separator layoutX="6.0" layoutY="287.0" prefHeight="4.0" prefWidth="289.0" />
+                    <Label layoutX="6.0" layoutY="291.0" text="Account Information" textFill="#00000099">
+                        <font>
+                            <Font name="Arial Bold" size="13.0" />
+                        </font>
+                    </Label>
+                    <Separator layoutX="6.0" layoutY="433.0" prefHeight="4.0" prefWidth="289.0" />
+                    <Label layoutX="6.0" layoutY="437.0" text="Employment Information" textFill="#00000099">
+                        <font>
+                            <Font name="Arial Bold" size="13.0" />
+                        </font>
+                    </Label>
+                    <Group layoutX="4.0" layoutY="461.0">
+                        <children>
+                            <Label text="Highest Qualification" />
+                            <Label layoutX="114.0" layoutY="-1.0" text="*" textFill="RED">
+                                <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                </font>
+                            </Label>
+                            <ComboBox fx:id="cmbQualification" layoutY="17.0" prefHeight="33.0" prefWidth="289.0" />
+                        </children>
+                    </Group>
+                    <Group layoutX="4.0" layoutY="519.0">
+                        <children>
+                            <Label text="Department" />
+                            <Label layoutX="64.0" layoutY="-1.0" text="*" textFill="RED">
+                                <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                </font>
+                            </Label>
+                            <ComboBox fx:id="cmbDepartment" layoutY="17.0" prefHeight="33.0" prefWidth="289.0" />
+                        </children>
+                    </Group>
+                    <Group layoutX="5.0" layoutY="577.0">
+                        <children>
+                            <DatePicker fx:id="dateInterview" layoutX="1.0" layoutY="16.0" prefHeight="33.0" prefWidth="288.0" />
+                            <Label layoutY="1.0" text="Interview Date" />
+                            <Label layoutX="111.0" text="*" textFill="RED">
+                                <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                </font>
+                            </Label>
+                        </children>
+                    </Group>
+
+                    <Button fx:id="btnSave" layoutX="125.0" layoutY="727.0" mnemonicParsing="false" onAction="#save" prefHeight="33.0" prefWidth="74.0" text="Save" />
+                    <Button fx:id="btnClear" layoutX="206.0" layoutY="727.0" mnemonicParsing="false" onAction="#clearForm" prefHeight="33.0" prefWidth="75.0" text="Clear" />
+               <Label fx:id="lblCreateBy" layoutX="4.0" layoutY="641.0" prefHeight="17.0" prefWidth="287.0" text="Created By : ">
+                  <font>
+                     <Font name="Arial Rounded MT Bold" size="13.0" />
+                  </font></Label>
+               <Label fx:id="lblCreatedBranch" layoutX="4.0" layoutY="664.0" text="Branch : ">
+                  <font>
+                     <Font name="Arial Rounded MT Bold" size="13.0" />
+                  </font>
+               </Label>
+               <Label fx:id="lblCreatedAt" layoutX="6.0" layoutY="687.0" text="Create Date">
+                  <font>
+                     <Font name="Arial Rounded MT Bold" size="13.0" />
+                  </font>
+               </Label>
+
+                </children>
+            </AnchorPane>
+        </content>
+    </ScrollPane>
+    <TableView fx:id="tableViewRecruit" layoutX="344.0" layoutY="73.0" prefHeight="456.0" prefWidth="602.0">
+        <columns>
+            <TableColumn fx:id="indexColumn" text="#" />
+            <TableColumn fx:id="nameColumn" text="Full Name" />
+            <TableColumn fx:id="emailColumn" text="Email" />
+            <TableColumn fx:id="departmentColumn" text="Department" />
+            <TableColumn fx:id="dateColumn" text="Create Date" />
+        </columns>
+    </TableView>
+</Pane>
