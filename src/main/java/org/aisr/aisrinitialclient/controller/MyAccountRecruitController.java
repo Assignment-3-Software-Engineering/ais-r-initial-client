@@ -13,6 +13,7 @@ import org.aisr.aisrinitialclient.model.data.User;
 import org.aisr.aisrinitialclient.model.dto.StaffDto;
 import org.aisr.aisrinitialclient.service.UiServices;
 import org.aisr.aisrinitialclient.util.*;
+import org.apache.commons.lang3.StringUtils;
 
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -148,6 +149,12 @@ public class MyAccountRecruitController implements Initializable {
         String password1 = txtPassword1.getText();
 
         try {
+
+            if (StringUtils.isAnyEmpty(password,password1)){
+                UiServices.showAlert("Password Invalid", "Please Enter password");
+                return;
+            }
+
             if (!password1.equals(password)){
                 UiServices.showAlert("Password Invalid", "The two passwords you entered do not match.");
                 return;

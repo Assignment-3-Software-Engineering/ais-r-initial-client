@@ -157,6 +157,11 @@ public class MyAccountStaffController implements Initializable {
         String password = txtPassword.getText();
         String password1 = txtPassword1.getText();
 
+        if (StringUtils.isAnyEmpty(password,password1)){
+            UiServices.showAlert("Password Invalid", "Please Enter password");
+            return;
+        }
+
         try {
             if (!password1.equals(password)){
                 UiServices.showAlert("Password Invalid", "The two passwords you entered do not match.");
